@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 (function() {
     function config($stateProvider, $locationProvider) {
        $locationProvider
@@ -14,33 +13,18 @@
         })
        .state('album', {
            url: '/album',
+           controller: 'AlbumCtrl as album',
            templateUrl: '/templates/album.html'
-         });
+         })
 
         .state('collection', {
            url: '/collection',
            controller: 'CollectionCtrl as collection',
            templateUrl: '/templates/collection.html'
          });
-}
+ }
 
-     angular
-            .module('blocJams', ['ui.router'])
-            .config(config);
-    })();
-=======
-angular.module('blocJams', []);
-
-$stateProvider {
-    .state('collection', {
-        url: "/collection",
-        templateUrl: 'collection.html'
-    })
-  }
-
-$stateProvider.state('collection', {
-  templateUrl: function ($stateParams){
-    return '/partials/collection.' + $stateParams.filterBy + '.html';
-  }
-})
->>>>>>> assignment-3-routing
+ angular
+        .module('blocJams', ['ui.router'])
+        .config(config);
+})();
