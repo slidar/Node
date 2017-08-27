@@ -31,14 +31,20 @@
             SongPlayer.currentSong = song;
          };
 
+         /**
+         * @function play
+         * @desc Play current or new song
+         * @param {Object} song
+         */
+
          SongPlayer.play = function(song) {
               if (SongPlayer.currentSong !== song) {
                   setSong(song);
                   currentBuzzObject.play();
                   song.playing = true;
-              } else if (currentSong === song) {
+              } else if (SongPlayer.currentSong === song) {
                   if (currentBuzzObject.isPaused()) {
-                    currentBuzzObject.play();
+                      playSong(song);
             }
         }
     };
@@ -46,10 +52,21 @@
          return SongPlayer;
     };
 
+    /**
+    * @function pause
+    * @desc Pause current song
+    * @param {Object} song
+    */
+
         SongPlayer.pause = function(song) {
             currentBuzzObject.pause();
             song.playing = false;
     };
+
+      SongPlayer.play = function(song) {
+        currentBuzzObject.play();
+        song.playing = false;
+      };
 
 
     angular
