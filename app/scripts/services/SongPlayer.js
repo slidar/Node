@@ -115,7 +115,26 @@
                   playSong(song);
                 }
         };
->>>>>>> checkpoint-8-part3
+
+        SongPlayer.next = function(song) {
+          var currentSongIndex = getSongIndex(SongPlayer.currentSong);
+          currentSongIndex
+
+          if (currentSongIndex < 0; i++;) {
+            currentBuzzObject.play();
+            SongPlayer.currentSong.playing = null;
+          } else {
+                var song = currentAlbum.songs[currentSongIndex];
+                setSong(song);
+                playSong(song);
+          }
+        };
+
+        SongPlayer.stopSong = function(song) {
+          currentBuzzObject.stop();
+          song.playing = null;
+        };
+
 
 
     angular
