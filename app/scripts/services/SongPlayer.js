@@ -63,9 +63,9 @@
             song.playing = false;
     };
 
-      SongPlayer.play = function(song) {
+      function playSong(song) {
         currentBuzzObject.play();
-        song.playing = false;
+        song.playing = true;
       };
 
 
