@@ -58,7 +58,6 @@
               song = song || SongPlayer.currentSong;
               if (SongPlayer.currentSong !== song) {
                   setSong(song);
-<<<<<<< HEAD
                   currentBuzzObject.play();
                   song.playing = true;
               } else if (SongPlayer.currentSong === song) {
@@ -69,10 +68,8 @@
     };
 
          return SongPlayer;
-    };
-
-=======
-                  playSong(song);
+    }
+                playSong(song);
               } else if (SongPlayer.currentSong === song) {
                   if (currentBuzzObject.isPaused()) {
                       playSong(song);
@@ -80,28 +77,23 @@
         }
     };
 
->>>>>>> checkpoint-8-part3
     /**
     * @function pause
     * @desc Pause current song
     * @param {Object} song
     */
-<<<<<<< HEAD
 
-=======
->>>>>>> checkpoint-8-part3
         SongPlayer.pause = function(song) {
             song = song || SongPlayer.currentSong;
             currentBuzzObject.pause();
             song.playing = false;
     };
 
-<<<<<<< HEAD
       SongPlayer.play = function(song) {
         currentBuzzObject.play();
         song.playing = false;
       };
-=======
+      
         SongPlayer.previous = function() {
             var currentSongIndex = getSongIndex(SongPlayer.currentSong);
             currentSongIndex--;
