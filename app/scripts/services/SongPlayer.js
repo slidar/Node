@@ -124,6 +124,11 @@
               song.playing = null;
             };
 
+            SongPlayer.volume = function(song) {
+              SongPlayer.setVolume();
+              song.playing = null;
+            };
+
             /**
             * @function setCurrentTime
             * @desc Set current time (in seconds) of currently playing song
