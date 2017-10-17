@@ -1,9 +1,9 @@
 (function() {
     function timecode() {
         return function(seconds) {
-             var seconds = Number.parseFloat(seconds);
+             var seconds = parseFloat(seconds);
 
-             if (Number.isNaN(seconds)) {
+             if (isNaN(seconds)) {
                  return '-:--';
              }
 
